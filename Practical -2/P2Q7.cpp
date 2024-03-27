@@ -1,4 +1,4 @@
-//Actually this is question no. 6 but int our practical question paper it was mistakenly given 7.
+//Actually this is question no. 6 but in our practical question paper it was mistakenly given Q.7.
 
 #include <iostream>
 #include <conio.h> // For _getch() function
