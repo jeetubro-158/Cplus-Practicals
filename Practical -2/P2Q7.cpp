@@ -1,3 +1,5 @@
+//Actually this is question no. 6 but int our practical question paper it was mistakenly given 7.
+
 #include <iostream>
 #include <conio.h> // For _getch() function
 using namespace std;
