@@ -66,7 +66,7 @@ class demo{
 };
 
 int main(){
-    demo d1,d2,d3;
+    demo d1,d2;
     d1.getData();
     d1.fact();
     d2.getData();
