@@ -1,26 +1,28 @@
+/*Write an OOP in C++ program to calculate the area of circle, 
+rectangle and square using the concept of method overloading*/
+
 #include <iostream>
 #include <math.h>
 using namespace std;
-float area(float r){
-    //area of circle
-    return M_PI*r; //pi = 3.14
+int Area(float r){
+    cout << "Area of circle = " << (M_PI*r*r) << endl;
+    return 0;
 }
-int area(int l, int b){
-    //for area of rectangle
-    return l*b;
+int Area(int l, int b){
+    cout << "Area of Rectangle = " << (l*b) << endl;
+    return 0;
 }
-int area(int r){
-    //for area of square
-    return r*r;
+int Area(int s){
+    cout << "Area of Square = " << (s*s) << endl;
+    return 0;
 }
+
 int main(){
-    int l,b,s;
-    float r;
-    l=5,b=10;
-    s=5;
-    r=5;
-    cout << "Area of Circle : " << area(r) <<endl;
-    cout <<"Area of Rectangle : " << area(l,b) <<endl;
-    cout << "Area of Square : " << area(s) <<endl;
+    //Area of Circle
+    Area(5.0f);
+    //Area of Rectangle
+    Area(5, 4);
+    //Area of Square
+    Area(5);
     return 0;
 }
