@@ -1,38 +1,28 @@
+/*Design a class Geometry containing the methods area()
+and volume() and also overload the area() function*/
+
 #include <iostream>
-#include <math.h>
 using namespace std;
-class Geometry{
-    float n;
-    public:
-    Geometry () {}
-    Geometry (float s){
-        n = s;
+class Geometry
+{
+public:
+    float Area(float r)    {
+        cout << "Area of circle = " << (3.14 * r * r) << endl;
+        return 0;
     }
-    float area (){
-        //area of square
-        return M_PI*n;
+    int Area(int l, int b)    {
+        cout << "Area of Rectangle = " << (l * b) << endl;
+        return 0;
     }
-
-    friend int area(int a);
-
-    float volume (){
-        //volume of cube
-        return n*n*n;
-    }  
-    
+    int Volume(int s){
+        cout << "Volume of Cube = " << (s*s*s) << endl;
+    }
 };
 
-int area(int a){
-        //area of square
-        return (a*a);
-    }
-
 int main(){
-    Geometry g1(5.0);
-    Geometry g2(6);
-    int s=5;
-    cout << "Area of Circle : " <<g1.area() << endl;
-    cout << "Volume of Cube : " <<g1.volume() << endl;
-    cout << "Area of Square : " << area(s) << endl;
+    Geometry g1;
+    g1.Area(5.0f);
+    g1.Area(6, 5);
+    g1.Volume(5);
     return 0;
 }
