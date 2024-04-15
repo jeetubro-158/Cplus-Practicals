@@ -1,35 +1,36 @@
+/*Design the class student in C++ containing getData()
+ and display Data() as two of its methods which will be 
+ used for reading and displaying the student information respectively.
+  Where getData() will be private method.*/
+
 #include <iostream>
 using namespace std;
 class Student{
     private:
-    int rollno,age;
-    double gpa;
     string name;
+    int rollno, age;
     void getData(){
-        cout << "Enter your Roll NO. : ";
-        cin >> rollno;
-        cout << "Enter your Name : ";
+        cout << "Enter Your Name : ";
         cin >> name;
-        cout << "Enter you Age : ";
+        cout << "Enter Your Roll NO. : ";
+        cin >> rollno;
+        cout << "Enter Your Age : ";
         cin >> age;
-        cout << "Enter your GPA : ";
-        cin >> gpa;
-        cout << "\n";
     }
     public:
-    void input(){
+    void readData(){
         getData();
     }
     void displayData(){
-        cout << "Student Details : " << endl;
+        cout << "\nName : " << name << endl;
         cout << "Roll NO. : " << rollno << endl;
-        cout << "Name : " << name << endl;
         cout << "Age : " << age << endl;
-        cout << "GPA : " << gpa << endl;
     }
 };
+
 int main(){
     Student s1;
-    s1.input();
+    s1.readData();
     s1.displayData();
+    return 0;
 }
