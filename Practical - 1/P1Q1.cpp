@@ -1,37 +1,38 @@
+/*Q.1. Write an OOP in C++ to create a claculator class with the addtion, subtraction,
+multiplication and division member functions.*/
 #include <iostream>
 using namespace std;
 class Calculator{
     private:
-    int a,b;
+    int num;
     public:
-    Calculator(){a = 0; b = 0;}
-    Calculator(int aa, int bb){
-        a = aa;
-        b = bb;
+    Calculator () {}
+    Calculator(int n){
+        num = n;
     }
-    void disp(){
-        cout << "a=" << a << " & b=" << b << endl;
+    int add(Calculator n2){
+        cout << "Addition = " << num + n2.num << endl;
+        return 0;
     }
-    void add(){
-        cout << "Additon = " << a + b << endl;
+    int sub(Calculator n2){
+        cout << "Subtraction = " << num - n2.num << endl;
+        return 0;
     }
-    void subtract(){
-        cout << "Subtraction = " << a - b << endl;
+    int Multi(Calculator n2){
+        cout << "Multiplication = " << num * n2.num << endl;
+        return 0;
     }
-    void multiply(){
-        cout << "Multiplication = " << a * b << endl;
-    }
-    void Divide(){
-        cout << "Devision = " << a / b << endl;
-    }
+    int Div(Calculator n2){
+        cout << "Division = " << num / n2.num << endl;
+        return 0;
+    }    
 };
-int main(){
-    Calculator num1(18,2);
-    num1.disp();
-    num1.add();
-    num1.subtract();
-    num1.multiply();
-    num1.Divide();
-    return 0;
 
+int main(){
+    Calculator c1(20), c2(5);
+    c1.add(c2);
+    c1.sub(c2);
+    c1.Multi(c2);
+    c1.Div(c2);
+    return 0;
 }
